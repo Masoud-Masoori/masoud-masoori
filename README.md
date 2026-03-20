@@ -9,7 +9,7 @@ Ontario, Canada | [mas-ai.co](https://mas-ai.co) | [LinkedIn](https://www.linked
 
 ## What I'm Building
 
-**[Daena](https://daena.mas-ai.co)** is a governance-first AI agent orchestration platform. Every task flows through a 10-stage deterministic pipeline (SecurityGate through AuditLog) with policy enforcement, multi-model routing, and full audit trail.
+**[Daena](https://daena.mas-ai.co)** is a governance-first AI agent orchestration platform. Every task flows through a 10-stage deterministic pipeline (SecurityGate through AuditLog) with policy enforcement, multi-model routing, and full audit trail. Core repo is private (patent-pending architecture).
 
 | Metric | Value |
 |---|---|
@@ -19,6 +19,41 @@ Ontario, Canada | [mas-ai.co](https://mas-ai.co) | [LinkedIn](https://www.linked
 | Multi-model synthesis | Council/Quintessence: **LIVE** |
 | Performance | **40x improvement** achieved |
 | Business model | BYOK: **75-82% gross margins** |
+
+---
+
+## Projects & Inventions
+
+### Flagship
+
+| Project | Description | Stack |
+|---|---|---|
+| [Daena](https://daena.mas-ai.co) | Governance-first AI agent orchestration platform. 10-stage deterministic pipeline, 48 agents across 8 departments, PhiLattice memory architecture. | Python, FastAPI, React, TypeScript |
+| [MergeLoop](https://github.com/Mas-AI-Official/MergeLoop) | Host-agnostic model council for MCP, CLI, and API workers. Run multi-model synthesis anywhere. | TypeScript |
+
+### Applications
+
+| Project | Description | Stack |
+|---|---|---|
+| [MedScan](https://github.com/Masoud-Masoori/MedScan) | Medical scanner and prescription reminder system | Python |
+| [NatureNLP](https://naturenlp.mas-ai.co) | Natural language processing platform | Python, HTML |
+| [LingoVids](https://github.com/Mas-AI-Official/lingovids) | AI video translator under MAS-AI | Shell |
+| [ContentOps](https://github.com/Mas-AI-Official/contentops-core) | Autonomous content operations engine for multi-platform, multi-niche publishing | Python, JavaScript |
+| [AI Autonomous Company OS](https://github.com/Mas-AI-Official/AI-Autonomus-company-OS) | AI-native company operating system | In development |
+
+### Demos & Showcases
+
+| Project | Description | Stack |
+|---|---|---|
+| [Daena DeFi Demo](https://github.com/Mas-AI-Official/hackathon_demo) | Hackathon demo: Daena governance applied to DeFi | TypeScript |
+| [Daena Live Demo](https://github.com/Mas-AI-Official/Daena-live-demo) | Interactive demo for investors and partners | Python |
+
+### Intellectual Property
+
+| Filing | Status |
+|---|---|
+| **PhiLattice Architecture** (USPTO Provisional) | Filed. Sunflower-honeycomb topology for multi-agent orchestration. |
+| **NBMF: Neural-Backed Memory Fabric** (USPTO Provisional) | Filed. Tiered memory fusion across agent interactions. |
 
 ---
 
@@ -59,7 +94,7 @@ Ontario, Canada | [mas-ai.co](https://mas-ai.co) | [LinkedIn](https://www.linked
 
 ## Background
 
-Civil engineering to AI/CS. Deep learning (CNNs, ResNet-18, CIFAR-10), robotics (ROS1/ROS2, Gazebo, JetAuto), full-stack development. Applied systems-engineering discipline to AI governance. Built Daena solo from architecture through 502 passing tests.
+Civil engineering to AI/CS. Deep learning (CNNs, ResNet-18, CIFAR-10), robotics (ROS1/ROS2, Gazebo, JetAuto), full-stack development. Applied systems-engineering discipline to AI governance. Built Daena solo from architecture through 502 passing tests, 2 patent filings, and 15+ public repos across the [MAS-AI org](https://github.com/Mas-AI-Official).
 
 ---
 
@@ -69,6 +104,7 @@ Civil engineering to AI/CS. Deep learning (CNNs, ResNet-18, CIFAR-10), robotics 
 |---|---|
 | Company | [mas-ai.co](https://mas-ai.co) |
 | Product | [daena.mas-ai.co](https://daena.mas-ai.co) |
+| NatureNLP | [naturenlp.mas-ai.co](https://naturenlp.mas-ai.co) |
 | Organization | [github.com/Mas-AI-Official](https://github.com/Mas-AI-Official) |
 | LinkedIn | [linkedin.com/in/masoud-masoori](https://www.linkedin.com/in/masoud-masoori/) |
 | X | [x.com/masoud_masoori](https://x.com/masoud_masoori) |
@@ -76,7 +112,11 @@ Civil engineering to AI/CS. Deep learning (CNNs, ResNet-18, CIFAR-10), robotics 
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Masoud-Masoori&show_icons=true&theme=github_dark&hide_border=true&count_private=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Masoud-Masoori&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Masoud-Masoori&layout=compact&theme=github_dark&hide_border=true" alt="Top Languages" />
 </p>
 
 <p align="center">
