@@ -19,6 +19,7 @@ Ontario, Canada | [mas-ai.co](https://mas-ai.co) | [LinkedIn](https://www.linked
 | Multi-model synthesis | Council/Quintessence: **LIVE** |
 | Performance | **40x improvement** achieved |
 | Business model | BYOK: **75-82% gross margins** |
+| Contributions | **2,038** in the last year, **1,245** in 2025 |
 
 ---
 
