@@ -29,7 +29,28 @@ Researching adversarial robustness in open-source agent ecosystems (OpenClaw, NV
 
 > **Reduce catastrophic risk from advanced AI by making autonomous agents safe, interpretable, and steerable — at production scale, not in slideware.**
 
-Most agent platforms ship hot-path LLM calls with no immutable guardrails. Daena inverts that: **every agent action passes through a 10-stage deterministic pipeline** — SecurityGate, InputValidator, GovernanceEngine, ContextBuilder, ReasoningCore, ActionPlanner, OutputValidator, ResponseFormatter, FeedbackLoop, AuditLog — with a Merkle-notarized audit trail and a 9-law immutable governance core that no agent, user, or LLM output can override.
+Most agent platforms ship hot-path LLM calls with no immutable guardrails. Daena inverts that: **every agent action passes through a 10-stage deterministic pipeline** — SecurityGate → LoadSession → QueryUnderstanding → GovernanceCheck → CostPreflight → ModelRouter → MemoryRecall → BuildRequest → LLMStream → Persist + Audit — Merkle-notarized end-to-end. Governance is enforced by **three always-on layers**:
+
+- **Shield** — prompt-injection scanner, behavior guard, tenant isolation at DB-middleware level
+- **Security** — SecurityGate, tool-call classifier, loop detector, async approval manager
+- **Asset Shield** *(NEW in v3.7.0)* — AES-GCM vault adapter + egress filter + consent tokens + initiator-aware tier collapse, protecting api_keys / finance / identity / legal / founder_memory from exfiltration regardless of which agent initiates
+
+Modes are user-controlled: **UNLEASHED** (Shield only) → **BALANCED** (light gates) → **GOVERNED** (full 9-law enforcement).
+
+---
+
+## 🆕 What Shipped Recently (Apr–May 2026)
+
+| Date | Ship |
+|:---|:---|
+| **2026-05-08** | **Task Control Registry & Dashboard** — central `registry.yaml` + web UI at `127.0.0.1:8450` to register, enable/disable, and audit every cron task, Windows Scheduled Task, and daemon across 30+ MAS-AI projects. Replaces 4+ CMD-window-flashing background jobs with hidden PowerShell wrappers. |
+| **2026-05-04** | **Token Discipline Protocol** — formal output-bloat governance for AI orchestrators: terse-by-default, narrow reads, no gratuitous sub-agent fan-out, delegate mechanical work to local GGUF models on a 4060. ~3× cost reduction per typical engineering day. |
+| **2026-04-29** | **ADR-001: Honesty + Persistence + Visibility** — no silent error suppression, no demo-data fallbacks, in-memory registries must hydrate from DB on startup, no auto-retry of destructive operations across restart. Locked across the Daena UI + backend. |
+| **2026-04-26** | **Cross-AI Delegation Protocol** — formal Claude Code ↔ Codex CLI hand-off table grounded in SWE-Bench Pro / Terminal-Bench 2.0; Port Registry; Organize-by-Umbrella file taxonomy. |
+| **2026-04-25** | **Three-Tier Escalation Router** + **Mixture-of-Agents + Karpathy 3-Stage Council** — gate Council/Quintessence by query complexity + risk (arXiv 2604.02460); anonymized peer review with chairman synthesis (Together-AI MoA, arXiv 2406.04692). |
+| **2026-04-21** | **Daena v3.7.1-production-lock-in** — 58 new unit tests closing zero-coverage gaps on `governance_engine`, `audit_service`, and `cognitive_scan_engine`. DB integrity confirmed clean. |
+| **2026-04-19** | **Daena v3.7.0-security-supercharge** — Asset Shield always-on; `SECURITY_SCAN` intent with 8-kind target detection (URL/domain/IP/CIDR/host:port/APK/IPA/AAB/Android pkg/git repo); 6-channel intel fanout (Web + NVD + GitHub Advisories + codebase-memory + NBMF T3 + KG); zero-FP gate; BeyondMythos enrichment (ErrorOracle, AdversarialSimulator, CompositionalPlanner). |
+| **2026-04-20** | **Local LLM runtime swap** — Ollama → `llama.cpp llama-server`; `LlamaServerManager` with mutex-locked hot-swap, cooldown thrash suppression, and `respect_external` mode that refuses to kill an MCP-bridge-owned process. |
 
 ---
 
@@ -39,14 +60,16 @@ Most agent platforms ship hot-path LLM calls with no immutable guardrails. Daena
 
 | Dimension | Status |
 |:---|:---|
-| 🧪 **Test Suite** | **1,424 / 1,424 passing**, 0 TypeScript errors |
-| 🤖 **Agent Fleet** | **60 unified agents × 6 capabilities** across **10 departments** |
-| 🧠 **LLM Routing** | **9 providers**: OpenAI · Claude · Gemini · DeepSeek · Qwen · Mistral · Yi · Ollama · Azure OpenAI |
-| 📜 **Patents Filed** | **2 USPTO Provisionals** (PhiLattice + NBMF/TLM/eDNA/Dream Engine) |
-| ⚡ **Token Efficiency** | **87.5% overhead reduction** per session via Tool Lifecycle Manager |
-| 🧬 **Memory Architecture** | **NBMF — 5 tiers** (T0 Working → T4 Permanent) with hallucination auto-expiry |
+| 🧪 **Test Suite** | **3,086 / 3,086 backend tests passing** *(verified 2026-04-18)* · 0 TypeScript errors · 6/6 Playwright E2E |
+| 🤖 **Agent Fleet** | **10 unified agents × 6 capabilities** (MIND · EYES · HANDS · VOICE · SHIELD · MEMORY) across **10 departments**, including Security Operations as Department 10 |
+| 🧠 **LLM Routing** | **9 providers**: Ollama (local llama.cpp) · Anthropic · OpenAI · Gemini · Groq · OpenRouter · Together.ai · Perplexity · Azure OpenAI |
+| 🛡️ **Governance Layers** | **3 always-on**: Shield + Security + Asset Shield · **3 modes**: UNLEASHED / BALANCED / GOVERNED |
+| 🧠 **Reasoning Modes** | **Standard** (single mind) · **Council** (3-model parallel) · **Quintessence** (Council + 15 DCP expert lenses + Karpathy anonymized peer review) |
+| 📜 **Patents Filed** | **2 USPTO Provisionals** — PhiLattice (#63/877,082, 25 claims) + NBMF stack (#64/020,421, 14 claims) |
+| ⚡ **Token Efficiency** | **87.5% overhead reduction** per session via Tool Lifecycle Manager (NBMF) |
+| 🧬 **Memory Architecture** | **NBMF — 5 tiers**: T0 Ephemeral (1hr) → T1 Working (7d) → T2 Project (1yr) → T3 Institutional (founder-approved) → T4 Founder-Private. Hallucinations auto-expire; only verified knowledge persists. |
 | 🏆 **Programs** | **Google for Startups** (Accepted '26) · **Consensus Hong Kong 2026** Developer Pass |
-| 💰 **Business Model** | BYOK with **75–82% gross margins** · FREE / PRO / ENTERPRISE tiers |
+| 💰 **Business Model** | BYOK with **75–82% gross margins** · FREE (Ollama local) / PRO ($29–99/mo) / ENTERPRISE ($500+/mo) |
 
 </div>
 
@@ -56,25 +79,31 @@ Most agent platforms ship hot-path LLM calls with no immutable guardrails. Daena
 
 ```mermaid
 flowchart LR
-    U([User / Agent Caller]) --> SG[🛡️ SecurityGate]
-    SG --> IV[InputValidator]
-    IV --> GE[GovernanceEngine<br/>9 immutable laws]
-    GE --> CB[ContextBuilder<br/>NBMF T0–T4 recall]
-    CB --> RC[ReasoningCore<br/>Standard / Council / Quintessence]
-    RC --> AP[ActionPlanner]
-    AP --> OV[OutputValidator]
-    OV --> RF[ResponseFormatter]
-    RF --> FL[FeedbackLoop<br/>eDNA Merkle lineage]
-    FL --> AL[(AuditLog<br/>tamper-evident)]
-    AL --> R([Response])
+    U([User / Agent Caller]) --> SG[🛡️ SecurityGate<br/>+ Asset Shield egress]
+    SG --> LS[LoadSession]
+    LS --> QU[QueryUnderstanding<br/>intent · complexity · risk]
+    QU --> GC[GovernanceCheck<br/>9 immutable laws]
+    GC --> CP[CostPreflight]
+    CP --> MR[ModelRouter<br/>tag · locality · cost · ctx]
+    MR --> MC[MemoryRecall<br/>NBMF T0–T4]
+    MC --> BR[BuildRequest]
+    BR --> RC[ReasoningCore<br/>Standard / Council / Quintessence]
+    RC --> LS2[LLMStream<br/>SSE chunks]
+    LS2 --> PA[(Persist + AuditLog<br/>Merkle-notarized)]
+    PA --> R([Response])
 
     style SG fill:#D4A843,stroke:#0F1419,color:#0F1419
-    style GE fill:#2DD4BF,stroke:#0F1419,color:#0F1419
+    style GC fill:#2DD4BF,stroke:#0F1419,color:#0F1419
     style RC fill:#6C3AFF,stroke:#0F1419,color:#FFFFFF
-    style AL fill:#0F1419,stroke:#D4A843,color:#D4A843
+    style PA fill:#0F1419,stroke:#D4A843,color:#D4A843
 ```
 
-Three reasoning modes — **Standard** (single primary mind), **Council** (3-model parallel synthesis), **Quintessence** (Council + 15 Domain Context Pack expert lenses with anonymized Karpathy-style peer review).
+**Three reasoning modes**, gated by a complexity + risk router (arXiv 2604.02460):
+- **Standard** — single primary mind with extended thinking. Default for SIMPLE / MODERATE queries.
+- **Council** — 3-model parallel proposers + anonymized Karpathy-style peer review + chairman synthesis. Promoted on COMPLEX / MULTI_STEP / HIGH_RISK.
+- **Quintessence** — Council + 15 DCP expert-lens injection across Engineering / Product / Design.
+
+**EXE mode** adds DaenaBot tool dispatch (FileAgent · TerminalAgent · BrowserAgent · MCPAgent) between BuildRequest and LLMStream, gated by per-tool Allow / Ask / Block permissions.
 
 ---
 
@@ -123,8 +152,8 @@ Fibonacci-derived hexagonal topology for scalable agent placement. Golden-angle 
 
 #### [🛡️ Daena](https://github.com/Mas-AI-Official/daena)
 **Governed AI Orchestration Platform**
-10-stage pipeline · 60 agents
-1,424 tests · v3.6
+10-stage pipeline · 10 depts × 60 capabilities
+**3,086 tests** · **v3.7.1**
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 
@@ -181,6 +210,14 @@ AI paralegal for Canadian administrative tribunals. Wedge: Ontario Landlord & Te
 | [🌿 NatureNLP](https://naturenlp.mas-ai.co) | Nature-inspired NLP — ~2.4× token throughput, 35% lower perplexity vs GPT-2 baseline | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 | [🤖 AI Autonomous Company OS](https://github.com/Mas-AI-Official/AI-Autonomus-company-OS) | AI-native company operating system | *In development* |
 | [💼 Daena Auto-Apply](https://github.com/Mas-AI-Official/daena-auto-apply) | Apply for jobs with AI + local LLMs automatically | ![JS](https://img.shields.io/badge/-JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
+| 🎯 **Career OPS** | AI job search command center — evaluate offers, generate CVs, scan portals, track applications | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| 📊 **WorldSignal** | Trading intelligence + scenario engine — deterministic live path, sparse-simulation background research, three-path architecture (live/warm/background) | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| 🎲 **Poly Bet** | Prediction-market discovery + arbitrage scanner over Polymarket-style venues | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| 🛰️ **KYA / Mission Control** | Know-Your-Agent telemetry + mission-control dashboard for agent fleets in production | ![JS](https://img.shields.io/badge/-JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
+| 🗓️ **Task Control** | Central registry + web dashboard for every cron task, scheduled job, and daemon across 30+ MAS-AI projects. Replaces CMD-flashing background jobs with hidden, auditable schedules. | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| 🧬 **NBMF / Daena-Mind** | Tier-mapped memory vault (T0–T4) with Obsidian compatibility; founder-private tier; hallucination auto-expiry | ![Markdown](https://img.shields.io/badge/-Markdown-000000?style=flat-square&logo=markdown&logoColor=white) |
+| 🛠️ **GitNexus** | Code-intelligence graph indexed over Daena (24,541 symbols · 63,085 relationships · 300 execution flows) for impact analysis and safe refactor | ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) |
+| 🏗️ **Construction AI** | Civil-engineering domain port: governed estimation + risk analysis on Daena | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 
 ### Demos & Showcases
 
@@ -190,6 +227,42 @@ AI paralegal for Canadian administrative tribunals. Wedge: Ontario Landlord & Te
 | [🎤 Daena Live Demo](https://github.com/Mas-AI-Official/Daena-live-demo) | Investors & partners — interactive walkthrough |
 | [🌐 MAS-AI Site](https://github.com/Mas-AI-Official/Mas-AI-Official) | Company website |
 | [📈 Daena Investor Site](https://github.com/Mas-AI-Official/Daena-website) | Daena product landing page |
+
+---
+
+## 💼 Three Ways to Engage
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+#### 🛠️ Product
+**Self-Serve SaaS**
+[daena.mas-ai.co](https://daena.mas-ai.co)
+
+Governed multi-agent orchestration with FREE / PRO / ENTERPRISE tiers. Hosted, tenant-isolated, audit-logged. Sign in with Google or email.
+
+</td>
+<td width="33%" align="center">
+
+#### ⚙️ Automation
+**Done-With-You**
+[mas-ai.co](https://mas-ai.co)
+
+Integrate your existing job, workflow, or department with Daena agents and external LLMs. Auto-triage tickets, auto-run weekly reviews, auto-scan staging, auto-research competitors. Ships running with playbook + SOP.
+
+</td>
+<td width="33%" align="center">
+
+#### 🧭 Consulting
+**Done-For-You Strategic**
+[mas-ai.co/consulting](https://mas-ai.co/book)
+
+AI-readiness audits, governance design, agent architecture for regulated industries. Built on the patent stack (PhiLattice + NBMF). Retainer model.
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -276,7 +349,7 @@ AI paralegal for Canadian administrative tribunals. Wedge: Ontario Landlord & Te
 | 🛡️ **Cisco** | Introduction to Cybersecurity · 2024 |
 | 🐍 **University of Michigan** | Python for Everybody · Programming for Everybody *(2024)* |
 
-Civil-engineering origin → robotics (ROS1/ROS2, Gazebo, JetAuto) → deep learning (CNNs, ResNet-18, CIFAR-10) → full-stack → governed agentic systems. Built Daena solo from architecture through 1,424 passing tests, 2 patent filings, and 25+ public repos across the [MAS-AI org](https://github.com/Mas-AI-Official).
+Civil-engineering origin → robotics (ROS1/ROS2, Gazebo, JetAuto) → deep learning (CNNs, ResNet-18, CIFAR-10) → full-stack → governed agentic systems. Built Daena solo from architecture through **3,086 passing tests** (v3.7.1-production-lock-in), 2 USPTO patent filings, and 25+ public repos across the [MAS-AI org](https://github.com/Mas-AI-Official). Daily operator across ~30 projects under `D:\Ideas\` — orchestrated by Claude Code + Codex CLI through a formal cross-AI delegation protocol.
 
 ---
 
@@ -346,7 +419,8 @@ Civil-engineering origin → robotics (ROS1/ROS2, Gazebo, JetAuto) → deep lear
 
 <br/>
 
-**`2,038 contributions in the last year`** · **`1,245 in 2025`** · **`25+ public repos shipped`**
+**`2,038+ contributions in the last 12 months`** · **`25+ public repos shipped`** · **`30+ active projects under D:\Ideas`**
+**Currently shipping** — v3.7.1 production lock-in · Task Control registry · Asset Shield · Cross-AI delegation
 
 <img src="https://komarev.com/ghpvc/?username=Masoud-Masoori&color=D4A843&style=for-the-badge&label=Profile+Views" alt="Profile Views" />
 
