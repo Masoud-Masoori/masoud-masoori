@@ -1,432 +1,140 @@
-<div align="center">
-
-<a href="https://daena.mas-ai.co">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3500&pause=900&color=D4A843&center=true&vCenter=true&width=820&height=46&lines=Governance-First+AI+for+a+Safer+Agent+Era;Architect+of+Daena+%E2%80%94+10+Stages%2C+60+Agents%2C+10+Departments;AI+Safety+%E2%80%A2+Agentic+Systems+%E2%80%A2+Adversarial+Robustness;2+USPTO+Provisionals+%E2%80%A2+Google+for+Startups+'26" alt="Headline" />
-</a>
-
 # Masoud Masoori
 
-**AI Safety & Security Researcher · Agentic AI Architect**
-**Founder & CEO — [MAS-AI Technologies Inc.](https://mas-ai.co)** *(incorporated Ontario, Jan 2026)*
+**AI Safety and Security Researcher | Agentic AI Architect | Founder and CEO, MAS-AI Technologies Inc.**
 
-Building **[Daena](https://daena.mas-ai.co)** — the governance layer for autonomous AI agents.
-Researching adversarial robustness in open-source agent ecosystems (OpenClaw, NVIDIA NemoClaw).
+Richmond Hill, Ontario, Canada
 
-📍 Richmond Hill, Ontario, Canada
+> Reduce catastrophic risk from advanced AI by making autonomous agents safe, interpretable, and steerable, at production scale, not in slideware.
 
-[![Website](https://img.shields.io/badge/mas--ai.co-0F1419?style=for-the-badge&logo=safari&logoColor=D4A843)](https://mas-ai.co)
-[![Daena](https://img.shields.io/badge/daena.mas--ai.co-0F1419?style=for-the-badge&logo=spring&logoColor=2DD4BF)](https://daena.mas-ai.co)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/masoud-masoori/)
-[![X](https://img.shields.io/badge/X%20%2F%20Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/masoud_masoori)
-[![Email](https://img.shields.io/badge/Contact-D4A843?style=for-the-badge&logo=protonmail&logoColor=0F1419)](mailto:masoud.masoori@mas-ai.co)
-[![GitHub Org](https://img.shields.io/badge/MAS--AI--Official-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mas-AI-Official)
-
-</div>
+I build governance-first AI: multi-agent systems that turn real business requirements into reliable, auditable, production-grade software. Founder and sole architect of **Daena**, a governed agentic AI orchestration platform, and holder of two USPTO provisional patents in agentic AI.
 
 ---
 
-## 🛡️ Mission
+## What I Am Building
 
-> **Reduce catastrophic risk from advanced AI by making autonomous agents safe, interpretable, and steerable — at production scale, not in slideware.**
+**Daena (v3.7.1)** is a governance-first multi-agent AI orchestration platform.
 
-Most agent platforms ship hot-path LLM calls with no immutable guardrails. Daena inverts that: **every agent action passes through a 10-stage deterministic pipeline** — SecurityGate → LoadSession → QueryUnderstanding → GovernanceCheck → CostPreflight → ModelRouter → MemoryRecall → BuildRequest → LLMStream → Persist + Audit — Merkle-notarized end-to-end. Governance is enforced by **three always-on layers**:
+- 10-stage deterministic governed execution pipeline (SecurityGate, InputValidator, GovernanceEngine, ContextBuilder, ReasoningCore, ActionPlanner, OutputValidator, ResponseFormatter, FeedbackLoop, AuditLog)
+- 3,086 passing backend tests
+- 60 agents across 10 departments
+- 9 LLM and SLM providers (OpenAI, Azure OpenAI, Anthropic Claude, Gemini, DeepSeek, Qwen, Mistral, Yi, Ollama)
+- Governed hybrid RAG, NBMF 5-tier memory, tool lifecycle management, and full audit lineage
+- Accepted into the Google Startup Program
 
-- **Shield** — prompt-injection scanner, behavior guard, tenant isolation at DB-middleware level
-- **Security** — SecurityGate, tool-call classifier, loop detector, async approval manager
-- **Asset Shield** *(NEW in v3.7.0)* — AES-GCM vault adapter + egress filter + consent tokens + initiator-aware tier collapse, protecting api_keys / finance / identity / legal / founder_memory from exfiltration regardless of which agent initiates
-
-Modes are user-controlled: **UNLEASHED** (Shield only) → **BALANCED** (light gates) → **GOVERNED** (full 9-law enforcement).
-
----
-
-## 🆕 What Shipped Recently (Apr–May 2026)
-
-| Date | Ship |
-|:---|:---|
-| **2026-05-08** | **Task Control Registry & Dashboard** — central `registry.yaml` + web UI at `127.0.0.1:8450` to register, enable/disable, and audit every cron task, Windows Scheduled Task, and daemon across 30+ MAS-AI projects. Replaces 4+ CMD-window-flashing background jobs with hidden PowerShell wrappers. |
-| **2026-05-04** | **Token Discipline Protocol** — formal output-bloat governance for AI orchestrators: terse-by-default, narrow reads, no gratuitous sub-agent fan-out, delegate mechanical work to local GGUF models on a 4060. ~3× cost reduction per typical engineering day. |
-| **2026-04-29** | **ADR-001: Honesty + Persistence + Visibility** — no silent error suppression, no demo-data fallbacks, in-memory registries must hydrate from DB on startup, no auto-retry of destructive operations across restart. Locked across the Daena UI + backend. |
-| **2026-04-26** | **Cross-AI Delegation Protocol** — formal Claude Code ↔ Codex CLI hand-off table grounded in SWE-Bench Pro / Terminal-Bench 2.0; Port Registry; Organize-by-Umbrella file taxonomy. |
-| **2026-04-25** | **Three-Tier Escalation Router** + **Mixture-of-Agents + Karpathy 3-Stage Council** — gate Council/Quintessence by query complexity + risk (arXiv 2604.02460); anonymized peer review with chairman synthesis (Together-AI MoA, arXiv 2406.04692). |
-| **2026-04-21** | **Daena v3.7.1-production-lock-in** — 58 new unit tests closing zero-coverage gaps on `governance_engine`, `audit_service`, and `cognitive_scan_engine`. DB integrity confirmed clean. |
-| **2026-04-19** | **Daena v3.7.0-security-supercharge** — Asset Shield always-on; `SECURITY_SCAN` intent with 8-kind target detection (URL/domain/IP/CIDR/host:port/APK/IPA/AAB/Android pkg/git repo); 6-channel intel fanout (Web + NVD + GitHub Advisories + codebase-memory + NBMF T3 + KG); zero-FP gate; BeyondMythos enrichment (ErrorOracle, AdversarialSimulator, CompositionalPlanner). |
-| **2026-04-20** | **Local LLM runtime swap** — Ollama → `llama.cpp llama-server`; `LlamaServerManager` with mutex-locked hot-swap, cooldown thrash suppression, and `respect_external` mode that refuses to kill an MCP-bridge-owned process. |
+Live product: [daena.mas-ai.co](https://daena.mas-ai.co)
 
 ---
 
-## 📊 Daena at a Glance
+## Patents
 
-<div align="center">
+Two USPTO provisional patents filed:
 
-| Dimension | Status |
-|:---|:---|
-| 🧪 **Test Suite** | **3,086 / 3,086 backend tests passing** *(verified 2026-04-18)* · 0 TypeScript errors · 6/6 Playwright E2E |
-| 🤖 **Agent Fleet** | **10 unified agents × 6 capabilities** (MIND · EYES · HANDS · VOICE · SHIELD · MEMORY) across **10 departments**, including Security Operations as Department 10 |
-| 🧠 **LLM Routing** | **9 providers**: Ollama (local llama.cpp) · Anthropic · OpenAI · Gemini · Groq · OpenRouter · Together.ai · Perplexity · Azure OpenAI |
-| 🛡️ **Governance Layers** | **3 always-on**: Shield + Security + Asset Shield · **3 modes**: UNLEASHED / BALANCED / GOVERNED |
-| 🧠 **Reasoning Modes** | **Standard** (single mind) · **Council** (3-model parallel) · **Quintessence** (Council + 15 DCP expert lenses + Karpathy anonymized peer review) |
-| 📜 **Patents Filed** | **2 USPTO Provisionals** — PhiLattice (#63/877,082, 25 claims) + NBMF stack (#64/020,421, 14 claims) |
-| ⚡ **Token Efficiency** | **87.5% overhead reduction** per session via Tool Lifecycle Manager (NBMF) |
-| 🧬 **Memory Architecture** | **NBMF — 5 tiers**: T0 Ephemeral (1hr) → T1 Working (7d) → T2 Project (1yr) → T3 Institutional (founder-approved) → T4 Founder-Private. Hallucinations auto-expire; only verified knowledge persists. |
-| 🏆 **Programs** | **Google for Startups** (Accepted '26) · **Consensus Hong Kong 2026** Developer Pass |
-| 💰 **Business Model** | BYOK with **75–82% gross margins** · FREE (Ollama local) / PRO ($29–99/mo) / ENTERPRISE ($500+/mo) |
-
-</div>
+- **PhiLattice** (App #63/877,082): Fibonacci-derived hexagonal topology for scalable agent placement, golden-angle spacing, ABAC governance tiers, and Merkle-notarized audit lineage.
+- **NBMF Stack** (App #64/020,421): Neural-Backed Memory Fabric (5 tiers, trust-gated promotion, hallucination auto-expiry), Tool Lifecycle Manager (87.5 percent token reduction), eDNA (Merkle-notarized agent learning), and the autonomous 6-phase Dream Engine.
 
 ---
 
-## 🏗️ Architecture Snapshot
+## Projects
 
-```mermaid
-flowchart LR
-    U([User / Agent Caller]) --> SG[🛡️ SecurityGate<br/>+ Asset Shield egress]
-    SG --> LS[LoadSession]
-    LS --> QU[QueryUnderstanding<br/>intent · complexity · risk]
-    QU --> GC[GovernanceCheck<br/>9 immutable laws]
-    GC --> CP[CostPreflight]
-    CP --> MR[ModelRouter<br/>tag · locality · cost · ctx]
-    MR --> MC[MemoryRecall<br/>NBMF T0–T4]
-    MC --> BR[BuildRequest]
-    BR --> RC[ReasoningCore<br/>Standard / Council / Quintessence]
-    RC --> LS2[LLMStream<br/>SSE chunks]
-    LS2 --> PA[(Persist + AuditLog<br/>Merkle-notarized)]
-    PA --> R([Response])
+### Flagship Platform
+- **Daena**: Governance-first multi-agent orchestration. 10-stage governed pipeline, 3,086 tests, 60 agents, 10 departments, 9 providers, hybrid RAG, NBMF memory. [github.com/Mas-AI-Official/daena](https://github.com/Mas-AI-Official)
 
-    style SG fill:#D4A843,stroke:#0F1419,color:#0F1419
-    style GC fill:#2DD4BF,stroke:#0F1419,color:#0F1419
-    style RC fill:#6C3AFF,stroke:#0F1419,color:#FFFFFF
-    style PA fill:#0F1419,stroke:#D4A843,color:#D4A843
-```
+### Trust and Governance Infrastructure
+- **KYA Mission Control**: Open-protocol trust infrastructure for autonomous AI agents. Ed25519 agent passports, 12-state mission lifecycle, scope-subset delegation, multi-dimension budgets (dollars, tokens, time, surfaces), human checkpoint escalation, Merkle-rooted signed receipts, and optional on-chain anchoring (Base Sepolia). Cross-runtime across Claude, GPT, Gemini, and Llama. Apache 2.0. [kya.mas-ai.co](https://kya.mas-ai.co)
 
-**Three reasoning modes**, gated by a complexity + risk router (arXiv 2604.02460):
-- **Standard** — single primary mind with extended thinking. Default for SIMPLE / MODERATE queries.
-- **Council** — 3-model parallel proposers + anonymized Karpathy-style peer review + chairman synthesis. Promoted on COMPLEX / MULTI_STEP / HIGH_RISK.
-- **Quintessence** — Council + 15 DCP expert-lens injection across Engineering / Product / Design.
+### Security and Research
+- **Klyntar (Daena Cybersecurity AI)**: Autonomous security-AI vulnerability finder for open-source agent ecosystems. Threat detection, anomaly classification, security event triage, and automated incident response.
+- **CaseWright**: AI paralegal for Canadian administrative tribunals. Governed legal research, document analysis, and drafting with citation and provenance tracking.
 
-**EXE mode** adds DaenaBot tool dispatch (FileAgent · TerminalAgent · BrowserAgent · MCPAgent) between BuildRequest and LLMStream, gated by per-tool Allow / Ask / Block permissions.
+### Developer Tools and Code Generation
+- **Daena Coder**: Requirements-to-production-code engine. Converts plain-language requirements into production-ready code through a plan, generate, test, validate pipeline (requirements to plan to code to tests to PR), with security-aware output validation. Free multi-LLM local swarm, language-agnostic across Python, Java, and TypeScript. MIT. [github.com/Mas-AI-Official/Daena-Coder](https://github.com/Mas-AI-Official)
+- **MergeLoop**: Host-agnostic model council for MCP, CLI, and API workers. Routes work across Codex, Gemini, Ollama, and custom workers, returns one unified answer. Apache 2.0. [github.com/Mas-AI-Official/MergeLoop](https://github.com/Mas-AI-Official)
+- **GitNexus**: Code-graph intelligence for large codebases. Indexes symbols, relationships, and execution flows for structure mapping and blast-radius impact analysis.
+- **Vibe Agent**: Visual agent builder with blueprint visualization. Design and wire agent graphs without writing orchestration code by hand.
 
----
-
-## 📜 Intellectual Property — USPTO Provisionals Filed
-
-<table>
-<tr>
-<td width="50%">
-
-### 🌻 PhiLattice Architecture
-**(Sunflower-Honeycomb)**
-
-`USPTO Provisional #63/877,082`
-`Confirmation #1142 · Filed Sept 2025`
-
-Fibonacci-derived hexagonal topology for scalable agent placement. Golden-angle spacing produces optimal information flow + ABAC governance tiers + consensus learning + Merkle-notarized audit lineage.
-
-**25 claims · 11 figures · 1,112 reference numerals**
-
-</td>
-<td width="50%">
-
-### 🧬 NBMF + TLM + eDNA + Dream Engine
-**(Neural-Backed Memory Fabric stack)**
-
-`USPTO Provisional #64/020,421`
-`Confirmation #7683 · Filed March 2026`
-
-5-tier neural-backed memory fabric · 87.5% token-reduction Tool Lifecycle Manager · Experience DNA with tamper-evident Merkle lineage · autonomous 6-phase Dream Engine consolidation.
-
-**14 claims · 20 figures**
-
-</td>
-</tr>
-</table>
-
----
-
-## 🚀 Projects & Inventions
-
-### Flagship
-
-<table>
-<tr>
-<td width="33%" align="center">
-
-#### [🛡️ Daena](https://github.com/Mas-AI-Official/daena)
-**Governed AI Orchestration Platform**
-10-stage pipeline · 10 depts × 60 capabilities
-**3,086 tests** · **v3.7.1**
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-
-</td>
-<td width="33%" align="center">
-
-#### [🔀 MergeLoop](https://github.com/Mas-AI-Official/MergeLoop)
-**Host-Agnostic Model Council**
-Run multi-model synthesis across MCP, CLI & API workers
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-
-</td>
-<td width="33%" align="center">
-
-#### [🧠 Vibe Agent](https://github.com/Mas-AI-Official/vibe-agent)
-**Visual Agent Builder**
-Vibe-code your agent → see the blueprint → deploy
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-
-</td>
-</tr>
-</table>
-
-### Research & Security
-
-<table>
-<tr>
-<td width="50%">
-
-#### [🔍 Klyntar](https://github.com/Mas-AI-Official/klyntar)
-Security-AI vulnerability finder. Open-source agent-ecosystem safety research applied to OpenClaw (247K+ stars) and NVIDIA NemoClaw — prompt injection, skill-registry poisoning, credential exposure, unvetted skill execution.
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-
-</td>
-<td width="50%">
-
-#### [⚖️ CaseWright](https://github.com/Masoud-Masoori/casewright)
-AI paralegal for Canadian administrative tribunals. Wedge: Ontario Landlord & Tenant Board. Governed legal-document drafting on top of Daena.
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-
-</td>
-</tr>
-</table>
+### Financial AI
+- **WorldSignal**: Autonomous trading intelligence built on Daena. Live market data integration (Kraken), autonomous signal generation, paper-trading simulation, a 56-agent crowd simulation (MirroFish), and a three-layer LLM architecture for background analysis, warm-path scoring, and live execution decisions.
+- **PolyBet**: Prediction-market intelligence and betting agent with governed execution.
+- **Daena DeFi Demo**: Decentralized finance workflows with governed agentic execution. Built for the Consensus Hong Kong 2026 hackathon. TypeScript. [github.com/Mas-AI-Official/hackathon_demo](https://github.com/Mas-AI-Official)
 
 ### Applications Built on Daena
+- **ContentOps**: Autonomous multi-platform content engine. Self-coordinating agents with shared memory and policy-enforced execution across planning, creation, and distribution for 5 or more content niches.
+- **LingoVids**: AI language and video content generation pipeline.
+- **Career OPS**: AI job-search command center. CV generation, job-portal scanning, application tracking, and offer evaluation.
+- **Construction AI**: AI assistant for construction operations, including QA and QC, scheduling support, and documentation.
 
-| Project | What it does | Stack |
-|---|---|---|
-| [🎬 ContentOps Core](https://github.com/Mas-AI-Official/contentops-core) | Autonomous multi-platform, multi-niche content engine — scrape → generate → schedule → publish | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![JS](https://img.shields.io/badge/-JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
-| [🌐 ContentOps Web](https://github.com/Mas-AI-Official/contentops-web) | Approval-queue dashboard for ContentOps drafts and rejections | ![JS](https://img.shields.io/badge/-JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
-| [💻 Daena Coder](https://github.com/Mas-AI-Official/Daena-Coder) | Free multi-LLM local swarm — governed code assistance with security-aware output validation | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| [🎥 LingoVids](https://github.com/Mas-AI-Official/lingovids) | AI video translator under the MAS-AI portfolio | ![Shell](https://img.shields.io/badge/-Shell-4EAA25?style=flat-square&logo=gnubash&logoColor=white) |
-| [🩺 MedScan](https://github.com/Masoud-Masoori/MedScan) | Medical scanner & prescription-reminder system | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| [🌿 NatureNLP](https://naturenlp.mas-ai.co) | Nature-inspired NLP — ~2.4× token throughput, 35% lower perplexity vs GPT-2 baseline | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| [🤖 AI Autonomous Company OS](https://github.com/Mas-AI-Official/AI-Autonomus-company-OS) | AI-native company operating system | *In development* |
-| [💼 Daena Auto-Apply](https://github.com/Mas-AI-Official/daena-auto-apply) | Apply for jobs with AI + local LLMs automatically | ![JS](https://img.shields.io/badge/-JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
-| 🎯 **Career OPS** | AI job search command center — evaluate offers, generate CVs, scan portals, track applications | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| 📊 **WorldSignal** | Trading intelligence + scenario engine — deterministic live path, sparse-simulation background research, three-path architecture (live/warm/background) | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| 🎲 **Poly Bet** | Prediction-market discovery + arbitrage scanner over Polymarket-style venues | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| 🛰️ **KYA / Mission Control** | Know-Your-Agent telemetry + mission-control dashboard for agent fleets in production | ![JS](https://img.shields.io/badge/-JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
-| 🗓️ **Task Control** | Central registry + web dashboard for every cron task, scheduled job, and daemon across 30+ MAS-AI projects. Replaces CMD-flashing background jobs with hidden, auditable schedules. | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| 🧬 **NBMF / Daena-Mind** | Tier-mapped memory vault (T0–T4) with Obsidian compatibility; founder-private tier; hallucination auto-expiry | ![Markdown](https://img.shields.io/badge/-Markdown-000000?style=flat-square&logo=markdown&logoColor=white) |
-| 🛠️ **GitNexus** | Code-intelligence graph indexed over Daena (24,541 symbols · 63,085 relationships · 300 execution flows) for impact analysis and safe refactor | ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) |
-| 🏗️ **Construction AI** | Civil-engineering domain port: governed estimation + risk analysis on Daena | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-
-### Demos & Showcases
-
-| Demo | Audience |
-|---|---|
-| [🪙 Daena DeFi Demo](https://github.com/Mas-AI-Official/hackathon_demo) | Hackathon — Daena governance applied to DeFi |
-| [🎤 Daena Live Demo](https://github.com/Mas-AI-Official/Daena-live-demo) | Investors & partners — interactive walkthrough |
-| [🌐 MAS-AI Site](https://github.com/Mas-AI-Official/Mas-AI-Official) | Company website |
-| [📈 Daena Investor Site](https://github.com/Mas-AI-Official/Daena-website) | Daena product landing page |
+### Machine Learning and NLP
+- **MedScan (Med Smart)**: Healthcare diagnosis assistant. AI-powered clinical decision support for symptom analysis and triage.
+- **NatureNLP (NatureHive)**: Nature-inspired NLP optimization. Approximately 2.4x token throughput and 35 percent lower perplexity versus a GPT-2 baseline.
+- **Transit Forecaster**: Python and scikit-learn regression model (R2 = 0.81) predicting seasonal public transit demand.
+- **Dumb-AI**: AI character chatbot application with distinct personalities and character-based prompt engineering.
 
 ---
 
-## 💼 Three Ways to Engage
+## Governance Architecture
 
-<table>
-<tr>
-<td width="33%" align="center">
+**Three always-on layers:** Shield, Security, Asset Shield
 
-#### 🛠️ Product
-**Self-Serve SaaS**
-[daena.mas-ai.co](https://daena.mas-ai.co)
+**Three reasoning modes:** Standard (single model), Council (3-model), Quintessence (15 expert lenses)
 
-Governed multi-agent orchestration with FREE / PRO / ENTERPRISE tiers. Hosted, tenant-isolated, audit-logged. Sign in with Google or email.
+**Three user modes:** UNLEASHED, BALANCED, GOVERNED
 
-</td>
-<td width="33%" align="center">
-
-#### ⚙️ Automation
-**Done-With-You**
-[mas-ai.co](https://mas-ai.co)
-
-Integrate your existing job, workflow, or department with Daena agents and external LLMs. Auto-triage tickets, auto-run weekly reviews, auto-scan staging, auto-research competitors. Ships running with playbook + SOP.
-
-</td>
-<td width="33%" align="center">
-
-#### 🧭 Consulting
-**Done-For-You Strategic**
-[mas-ai.co/consulting](https://mas-ai.co/book)
-
-AI-readiness audits, governance design, agent architecture for regulated industries. Built on the patent stack (PhiLattice + NBMF). Retainer model.
-
-</td>
-</tr>
-</table>
+Every agent action is traced, audited, and policy-enforced. AI output is treated like any human contribution: reviewed, tested, and gated before acceptance.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
-<div align="center">
+**Languages:** Python, TypeScript, JavaScript, Java, Bash
 
-**Languages**
+**AI and Agentic:** Anthropic Claude, OpenAI, Gemini, Groq, Ollama, MCP, LangChain, LangGraph, GitHub Copilot, Cursor, Codex, Claude Code
 
-![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Java](https://img.shields.io/badge/-Java-007396?style=for-the-badge&logo=openjdk&logoColor=white)
-![Bash](https://img.shields.io/badge/-Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
+**Backend:** FastAPI, PostgreSQL, Redis, SQLAlchemy, WebSockets, REST
 
-**AI / Agentic**
+**Frontend:** React 18, Vite, Tailwind, Framer Motion
 
-![Anthropic](https://img.shields.io/badge/-Anthropic_Claude-D4A574?style=for-the-badge&logo=anthropic&logoColor=white)
-![OpenAI](https://img.shields.io/badge/-OpenAI_GPT-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Gemini](https://img.shields.io/badge/-Gemini-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white)
-![Ollama](https://img.shields.io/badge/-Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
-![DeepSeek](https://img.shields.io/badge/-DeepSeek-0A0A0A?style=for-the-badge)
-![Qwen](https://img.shields.io/badge/-Qwen-6C3AFF?style=for-the-badge)
-![MCP](https://img.shields.io/badge/-Model_Context_Protocol-2DD4BF?style=for-the-badge)
-![LangChain](https://img.shields.io/badge/-LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+**Infrastructure:** Azure, Azure OpenAI, GCP (Cloud Run), AWS, Docker, GitHub Actions, Terraform
 
-**Backend & Data**
-
-![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/-SQLAlchemy-D71F00?style=for-the-badge)
-![WebSockets](https://img.shields.io/badge/-WebSockets-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
-
-**Frontend**
-
-![React](https://img.shields.io/badge/-React_18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind](https://img.shields.io/badge/-Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Framer](https://img.shields.io/badge/-Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-
-**Cloud & Infrastructure**
-
-![Azure](https://img.shields.io/badge/-Azure_OpenAI-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![GCP](https://img.shields.io/badge/-Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![AWS](https://img.shields.io/badge/-AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Terraform](https://img.shields.io/badge/-Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
-
-**Security & Governance**
-
-![OAuth](https://img.shields.io/badge/-OAuth_2.0-3C4858?style=for-the-badge&logo=auth0&logoColor=white)
-![JWT](https://img.shields.io/badge/-JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
-![Merkle](https://img.shields.io/badge/-Merkle_Audit-D4A843?style=for-the-badge)
-![RBAC%2FABAC](https://img.shields.io/badge/-RBAC%2FABAC-2DD4BF?style=for-the-badge)
-
-</div>
+**Practices:** Governed RAG, multi-model routing, RBAC and ABAC, OAuth and JWT, audit logging, Merkle lineage, CI and CD, test-gated delivery
 
 ---
 
-## 🔬 Research Interests
+## Background
 
-- **AI safety & alignment** in multi-agent systems
-- **Adversarial robustness** + prompt-injection defense in agentic architectures
-- **Hallucination detection, containment, auto-expiry** (NBMF trust-gated promotion)
-- **Tamper-evident lineage** for AI decision tracking (eDNA + Merkle)
-- **Scalable oversight** of LLM-powered agent fleets (9-law immutable governance)
-- **Memory safety** + trust-gated information flow in AI systems
-- **Open-source agent safety** research on OpenClaw / NVIDIA NemoClaw ecosystems
-- **AI-driven cybersecurity** — autonomous threat detection, anomaly classification
+- Graduate Certificate, Artificial Intelligence, Seneca College, Toronto (2025)
+- M.Sc. Civil Engineering, Transportation, Tehran (2020)
+- Certifications: AWS Cloud Practitioner, Cisco Introduction to Cybersecurity, University of Michigan Python for Everybody, Anthropic Academy (Claude API, MCP, Claude Code, AI Fluency)
+- Computing foundation since a 1999 operating-systems certification
+- Trajectory: civil engineering, then robotics, then deep learning, then full-stack, now governed agentic systems
 
 ---
 
-## 🎓 Background
+## Engagement Models
 
-| | |
-|:---|:---|
-| 🎓 **Graduate Certificate · Artificial Intelligence (AIG)** | Seneca College, Toronto, ON · 2025 |
-| 🎓 **M.Sc. Civil Engineering — Transportation** | Tehran, Iran · 2020 |
-| 🎓 **Professional Certificate · Computer Systems Technology** | Tehran College · 2020 |
-| 🏅 **Anthropic Academy** | Claude API Fundamentals · MCP · Claude Code · AI Fluency *(2025–26)* |
-| ☁️ **AWS Cloud Practitioner** | Cloud + Security · 2025 |
-| 🛡️ **Cisco** | Introduction to Cybersecurity · 2024 |
-| 🐍 **University of Michigan** | Python for Everybody · Programming for Everybody *(2024)* |
-
-Civil-engineering origin → robotics (ROS1/ROS2, Gazebo, JetAuto) → deep learning (CNNs, ResNet-18, CIFAR-10) → full-stack → governed agentic systems. Built Daena solo from architecture through **3,086 passing tests** (v3.7.1-production-lock-in), 2 USPTO patent filings, and 25+ public repos across the [MAS-AI org](https://github.com/Mas-AI-Official). Daily operator across ~30 projects under `D:\Ideas\` — orchestrated by Claude Code + Codex CLI through a formal cross-AI delegation protocol.
+1. **Product:** Self-serve SaaS at [daena.mas-ai.co](https://daena.mas-ai.co)
+2. **Automation:** Done-with-you integration services
+3. **Consulting:** Strategic AI-readiness audits and governance design
 
 ---
 
-## 🔗 Connect
+## Stats
 
-<table>
-<tr>
-<td>
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=Masoud-Masoori&show_icons=true&theme=dark&count_private=true)
 
-**Company**
-[mas-ai.co](https://mas-ai.co)
+![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Masoud-Masoori&layout=compact&theme=dark)
 
-</td>
-<td>
-
-**Product**
-[daena.mas-ai.co](https://daena.mas-ai.co)
-
-</td>
-<td>
-
-**Org**
-[github.com/Mas-AI-Official](https://github.com/Mas-AI-Official)
-
-</td>
-</tr>
-<tr>
-<td>
-
-**LinkedIn**
-[masoud-masoori](https://www.linkedin.com/in/masoud-masoori/)
-
-</td>
-<td>
-
-**X / Twitter**
-[@masoud_masoori](https://x.com/masoud_masoori)
-
-</td>
-<td>
-
-**Email**
-[masoud.masoori@mas-ai.co](mailto:masoud.masoori@mas-ai.co)
-
-</td>
-</tr>
-</table>
+- 2,038 or more contributions in the last 12 months
+- 25 or more public repositories shipped
+- 30 or more active projects under development
+- GitHub achievements: Pair Extraordinaire, Pull Shark
 
 ---
 
-<div align="center">
+## Contact
 
-### 📈 GitHub Activity
-
-<a href="https://github.com/Masoud-Masoori">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Masoud-Masoori&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&icon_color=D4A843&title_color=2DD4BF&text_color=FFFFFF&bg_color=0F1419" alt="GitHub Stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Masoud-Masoori&layout=compact&theme=github_dark&hide_border=true&title_color=2DD4BF&text_color=FFFFFF&bg_color=0F1419&langs_count=8" alt="Top Languages" />
-</a>
-
-<a href="https://github.com/Masoud-Masoori">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Masoud-Masoori&theme=dark&hide_border=true&background=0F1419&stroke=D4A843&ring=2DD4BF&fire=D4A843&currStreakLabel=2DD4BF" alt="Streak" />
-</a>
-
-<a href="https://github.com/Mas-AI-Official">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Masoud-Masoori&bg_color=0F1419&color=2DD4BF&line=D4A843&point=FFFFFF&area=true&hide_border=true" alt="Activity Graph" />
-</a>
-
-<br/>
-
-**`2,038+ contributions in the last 12 months`** · **`25+ public repos shipped`** · **`30+ active projects under D:\Ideas`**
-**Currently shipping** — v3.7.1 production lock-in · Task Control registry · Asset Shield · Cross-AI delegation
-
-<img src="https://komarev.com/ghpvc/?username=Masoud-Masoori&color=D4A843&style=for-the-badge&label=Profile+Views" alt="Profile Views" />
-
----
-
-> *"Make AI systems safe, interpretable, and steerable — at the speed of execution, not at the speed of approval queues."*
-> — **Masoud Masoori**, MAS-AI Technologies Inc.
-
-</div>
+- Website: [mas-ai.co](https://mas-ai.co)
+- Product: [daena.mas-ai.co](https://daena.mas-ai.co)
+- GitHub Org: [github.com/Mas-AI-Official](https://github.com/Mas-AI-Official)
+- LinkedIn: [masoud-masoori](https://linkedin.com/in/masoud-masoori)
+- X / Twitter: [@masoud_masoori](https://x.com/masoud_masoori)
+- Email: masoud.masoori@mas-ai.co
