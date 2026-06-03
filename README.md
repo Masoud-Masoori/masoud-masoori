@@ -211,6 +211,7 @@ AI paralegal for Canadian administrative tribunals. Wedge: Ontario Landlord & Te
 | [🤖 AI Autonomous Company OS](https://github.com/Mas-AI-Official/AI-Autonomus-company-OS) | AI-native company operating system | *In development* |
 | [💼 Daena Auto-Apply](https://github.com/Mas-AI-Official/daena-auto-apply) | Apply for jobs with AI + local LLMs automatically | ![JS](https://img.shields.io/badge/-JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
 | 🎯 **Career OPS** | AI job search command center — evaluate offers, generate CVs, scan portals, track applications | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| [🧑‍💼 InterviewOps](https://github.com/Mas-AI-Official/InterviewOPS) | AI interview-prep copilot: structured mock interviews, question banks, and real-time feedback | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 | 📊 **WorldSignal** | Trading intelligence + scenario engine — deterministic live path, sparse-simulation background research, three-path architecture (live/warm/background) | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 | 🎲 **Poly Bet** | Prediction-market discovery + arbitrage scanner over Polymarket-style venues | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 | 🛰️ **KYA / Mission Control** | Know-Your-Agent telemetry + mission-control dashboard for agent fleets in production | ![JS](https://img.shields.io/badge/-JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
@@ -234,6 +235,15 @@ AI paralegal for Canadian administrative tribunals. Wedge: Ontario Landlord & Te
 |---|---|---|
 | 🚆 **Transit Forecaster** | scikit-learn regression model (R2 = 0.81) forecasting seasonal public-transit demand | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![scikit-learn](https://img.shields.io/badge/-scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white) |
 | 🎭 **Dumb-AI** | AI character chatbot: talk to AI personalities built with character-based prompt engineering | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+
+### Hackathons & Independent Builds
+
+| Project | What it does | Event / Stack |
+|---|---|---|
+| [🏠 CompMemo](https://github.com/Masoud-Masoori/compmemo) | AI agent that ranks comparable real-estate properties to support a valuation estimate, with citations to every comp used | KV Capital Hackathon · ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| [🏥 Transition Pilot](https://github.com/Masoud-Masoori/transition-pilot) | FHIR-native Specialist Auditor MCP server: turns a hospital discharge into a CIO-shippable "Discharge Failure Prevented" memo with clickable FHIR evidence | Devpost Agents Assemble 2026 · ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| [🛡️ ModNote](https://github.com/Masoud-Masoori/modnote) | AI removal-explanation composer for Reddit moderators on Devvit: every removal explained in one click | Reddit Devvit · ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) |
+| [🌅 MorningMythos](https://github.com/Masoud-Masoori/morning-mythos) | Family morning-routine optimizer with slip-pattern detection (EN / 中文 / ES) | Build with MeDo Hackathon · ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 
 ---
 
