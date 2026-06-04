@@ -60,7 +60,7 @@ Modes are user-controlled: **UNLEASHED** (Shield only) → **BALANCED** (light g
 
 | Dimension | Status |
 |:---|:---|
-| 🧪 **Test Suite** | **3,086 / 3,086 backend tests passing** *(verified 2026-04-18)* · 0 TypeScript errors · 6/6 Playwright E2E |
+| 🧪 **Test Suite** | **6,000+ backend tests passing** · 0 TypeScript errors · 6/6 Playwright E2E |
 | 🤖 **Agent Fleet** | **10 unified agents × 6 capabilities** (MIND · EYES · HANDS · VOICE · SHIELD · MEMORY) across **10 departments**, including Security Operations as Department 10 |
 | 🧠 **LLM Routing** | **9 providers**: Ollama (local llama.cpp) · Anthropic · OpenAI · Gemini · Groq · OpenRouter · Together.ai · Perplexity · Azure OpenAI |
 | 🛡️ **Governance Layers** | **3 always-on**: Shield + Security + Asset Shield · **3 modes**: UNLEASHED / BALANCED / GOVERNED |
@@ -153,7 +153,7 @@ Fibonacci-derived hexagonal topology for scalable agent placement. Golden-angle 
 #### [🛡️ Daena](https://github.com/Mas-AI-Official/daena)
 **Governed AI Orchestration Platform**
 10-stage pipeline · 10 depts × 60 capabilities
-**3,086 tests** · **v3.7.1**
+**6,000+ tests** · **v3.7.1**
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 
@@ -366,7 +366,7 @@ AI-readiness audits, governance design, agent architecture for regulated industr
 | 🛡️ **Cisco** | Introduction to Cybersecurity · 2024 |
 | 🐍 **University of Michigan** | Python for Everybody · Programming for Everybody *(2024)* |
 
-Civil-engineering origin → robotics (ROS1/ROS2, Gazebo, JetAuto) → deep learning (CNNs, ResNet-18, CIFAR-10) → full-stack → governed agentic systems. Built Daena solo from architecture through **3,086 passing tests** (v3.7.1-production-lock-in), 2 USPTO patent filings, and 25+ public repos across the [MAS-AI org](https://github.com/Mas-AI-Official). Daily operator across ~30 projects under `D:\Ideas\` — orchestrated by Claude Code + Codex CLI through a formal cross-AI delegation protocol.
+Civil-engineering origin → robotics (ROS1/ROS2, Gazebo, JetAuto) → deep learning (CNNs, ResNet-18, CIFAR-10) → full-stack → governed agentic systems. Built Daena solo from architecture through **6,000+ passing tests** (v3.7.1-production-lock-in), 2 USPTO patent filings, and 25+ public repos across the [MAS-AI org](https://github.com/Mas-AI-Official). Daily operator across ~30 projects under `D:\Ideas\` — orchestrated by Claude Code + Codex CLI through a formal cross-AI delegation protocol.
 
 ---
 
