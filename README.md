@@ -181,7 +181,7 @@ Vibe-code your agent → see the blueprint → deploy
 
 ### 🔌 Open Source
 
-> ### [🔌 Switchboard — `mcp-switchboard`](https://github.com/Masoud-Masoori/mcp-switchboard)
+> ### [🔌 Switchboard — `mcp-switchboard`](https://github.com/Mas-AI-Official/mcp-switchboard)
 > **Local-first, governed MCP aggregator — one endpoint for Claude, ChatGPT, Cursor & your agents.** Re-exposes *all* your MCP servers behind a single control plane: keys stay in a local encrypted vault, and every tool call passes the same policy + approval gates + audit log. Collapses N×M connector sprawl into **N×1**.
 >
 > ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![MCP](https://img.shields.io/badge/-Model_Context_Protocol-2DD4BF?style=flat-square) ![Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-D4A843?style=flat-square)
