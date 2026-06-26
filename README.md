@@ -144,6 +144,8 @@ Fibonacci-derived hexagonal topology for scalable agent placement. Golden-angle 
 
 ## 🚀 Projects & Inventions
 
+> 🏢 **Most of MAS-AI's work lives in the [MAS-AI organization](https://github.com/Mas-AI-Official), not on this personal account.** What's here is a curated slice — flagship links, research, hackathon builds, and solo experiments. The org holds more repos (plus the patent-pending Daena core) and is where the bulk of active development and team contribution happens. **Want details on any project? → [github.com/Mas-AI-Official](https://github.com/Mas-AI-Official).**
+
 ### Flagship
 
 <table>
@@ -176,6 +178,13 @@ Vibe-code your agent → see the blueprint → deploy
 </td>
 </tr>
 </table>
+
+### 🔌 Open Source
+
+> ### [🔌 Switchboard — `mcp-switchboard`](https://github.com/Masoud-Masoori/mcp-switchboard)
+> **Local-first, governed MCP aggregator — one endpoint for Claude, ChatGPT, Cursor & your agents.** Re-exposes *all* your MCP servers behind a single control plane: keys stay in a local encrypted vault, and every tool call passes the same policy + approval gates + audit log. Collapses N×M connector sprawl into **N×1**.
+>
+> ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![MCP](https://img.shields.io/badge/-Model_Context_Protocol-2DD4BF?style=flat-square) ![Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-D4A843?style=flat-square)
 
 ### Research & Security
 
@@ -366,7 +375,7 @@ AI-readiness audits, governance design, agent architecture for regulated industr
 | 🛡️ **Cisco** | Introduction to Cybersecurity · 2024 |
 | 🐍 **University of Michigan** | Python for Everybody · Programming for Everybody *(2024)* |
 
-Civil-engineering origin → robotics (ROS1/ROS2, Gazebo, JetAuto) → deep learning (CNNs, ResNet-18, CIFAR-10) → full-stack → governed agentic systems. Built Daena solo from architecture through **6,000+ passing tests** (v3.7.1-production-lock-in), 2 USPTO patent filings, and 25+ public repos across the [MAS-AI org](https://github.com/Mas-AI-Official). Daily operator across ~30 projects under `D:\Ideas\` — orchestrated by Claude Code + Codex CLI through a formal cross-AI delegation protocol.
+Civil-engineering origin → robotics (ROS1/ROS2, Gazebo, JetAuto) → deep learning (CNNs, ResNet-18, CIFAR-10) → full-stack → governed agentic systems. Built Daena solo from architecture through **6,000+ passing tests** (v3.7.1-production-lock-in), 2 USPTO patent filings, and 25+ public repos across the [MAS-AI org](https://github.com/Mas-AI-Official) and this account — with most active development happening in the org. Daily operator across ~30 projects under `D:\Ideas\` — orchestrated by Claude Code + Codex CLI through a formal cross-AI delegation protocol.
 
 ---
 
