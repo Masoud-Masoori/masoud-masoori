@@ -13,6 +13,8 @@ Building **[Daena](https://daena.mas-ai.co)** — the governed AI control plane 
 
 📍 Richmond Hill, Ontario, Canada
 
+_Profile refreshed July 2026 · Public work: Daena governance, MCP Switchboard, ContentOps, and evidence-backed agent tooling._
+
 [![Website](https://img.shields.io/badge/mas--ai.co-0F1419?style=for-the-badge&logo=safari&logoColor=D4A843)](https://mas-ai.co)
 [![Daena](https://img.shields.io/badge/daena.mas--ai.co-0F1419?style=for-the-badge&logo=spring&logoColor=2DD4BF)](https://daena.mas-ai.co)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/masoud-masoori/)
@@ -20,7 +22,7 @@ Building **[Daena](https://daena.mas-ai.co)** — the governed AI control plane 
 [![Email](https://img.shields.io/badge/Contact-D4A843?style=for-the-badge&logo=protonmail&logoColor=0F1419)](mailto:masoud.masoori@mas-ai.co)
 [![GitHub Org](https://img.shields.io/badge/MAS--AI--Official-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mas-AI-Official)
 
-📜 [2 USPTO provisional patents](#-intellectual-property--uspto-provisionals-filed) · 🚀 [Google for Startups '26](https://mas-ai.co) · 🎓 Anthropic Academy · 🧪 3,086 backend tests passing
+📜 [2 USPTO provisional patents](#-intellectual-property--uspto-provisionals-filed) · 🚀 [Google for Startups '26](https://mas-ai.co) · 🎓 Anthropic Academy · 🧪 deterministically verified engineering
 
 </div>
 
@@ -151,7 +153,7 @@ AI-readiness audits, governance design, agent architecture for regulated industr
 | ☁️ **AWS Cloud Practitioner** | Cloud + Security · 2025 |
 | 🛡️ **Cisco** | Introduction to Cybersecurity · 2024 |
 
-Civil-engineering origin → robotics (ROS1/ROS2, Gazebo) → deep learning → full-stack → governed agentic systems. Built Daena solo from architecture through **3,086 passing backend tests** and **2 USPTO patent filings**, with most active development in the [MAS-AI org](https://github.com/Mas-AI-Official).
+Civil-engineering origin → robotics (ROS1/ROS2, Gazebo) → deep learning → full-stack → governed agentic systems. Built Daena solo from architecture through **a deterministically verified backend** and **2 USPTO patent filings**, with most active development in the [MAS-AI org](https://github.com/Mas-AI-Official).
 
 ---
 
